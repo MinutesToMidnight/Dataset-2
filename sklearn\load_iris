@@ -33,7 +33,7 @@ def exponential_moving_average(data, alpha):
 
 
 alpha = 0.3
-cumulative_loss = deque([1])
+cumulative_loss = deque([float("inf")])
 steps = 0
 model.train()
 while np.mean(cumulative_loss) > 0.2:
