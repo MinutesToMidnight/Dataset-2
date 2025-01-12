@@ -9,7 +9,7 @@ import numpy as np
 
 
 X = load_iris()
-X, y, y_size = torch.tensor(X['data'], dtype=torch.float32), torch.tensor(X['target'], dtype=torch.float32), len(X['target_names'])
+X, y, y_size = torch.tensor(X['data'], dtype=torch.float32), torch.tensor(X['target'], dtype=torch.long), len(X['target_names'])
 
 scaler = StandardScaler()
 X = scaler.fit_transform(X)
